@@ -6,11 +6,11 @@
 
                           
 //---------------------------------------------------------------//---------------------------------------------------						  
-						  //inicio da escolha usando usando "FUNÇÃO"
-                         //funções ficam acima do "INT MAIN" nesse tipo de caso 
+						  //inicio da escolha usando usando "FUNÃ‡ÃƒO"
+                         //funÃ§Ãµes ficam acima do "INT MAIN" nesse tipo de caso 
 
 
-int registro()   //inicio da opção de registro
+int registro()   //inicio da opÃ§Ã£o de registro
 {
      char arquivo1[40];
 	 char cpf[40];
@@ -71,7 +71,7 @@ int registro()   //inicio da opção de registro
 
 }
 
-int consulta()       //inicio da opção de consultar
+int consulta()       //inicio da opÃ§Ã£o de consultar
 {
 setlocale(LC_ALL, "Portuguese");
       
@@ -86,12 +86,12 @@ setlocale(LC_ALL, "Portuguese");
     
 	if(file == NULL)
 	{
-		printf("esse arquivo não consta no banco de dados.\n");
+		printf("esse arquivo nÃ£o consta no banco de dados.\n");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-		printf("\nessas são as informações do usuário:\n");
+		printf("\nessas sÃ£o as informaÃ§Ãµes do usuÃ¡rio:\n");
 		printf("%s", conteudo);
 		printf("\n\n");
     }
@@ -99,8 +99,8 @@ setlocale(LC_ALL, "Portuguese");
 
 }
 
-
-int deletar()     //inicio da opção de deletar
+//---------------------------------------------------------------//--------------------------------------------------- 
+int deletar()     //inicio da opÃ§Ã£o de deletar
 {
     char cpf[40];
     printf("informe o CPF a ser deletado:\n");
@@ -113,14 +113,14 @@ int deletar()     //inicio da opção de deletar
     
     if(file == NULL)
     {
-	printf("essa informações não encontrasse em nosso sistema!\n");
+	printf("essa informaÃ§Ãµes nÃ£o encontrasse em nosso sistema!\n");
     system("pause");
 	}
 
 }
 
 //---------------------------------------------------------------//--------------------------------------------------- 
-                         //inicio do programa e suas variações acima e abaixo
+                                         //inicio do programa
 int main() {
 	
 setlocale(LC_ALL, "Portuguese");
@@ -130,18 +130,18 @@ int laco=1;
  for(laco=1;laco=1;){
  	system("cls");
 	
-	  printf("### cartório de consulta ebac ###\n");//inicio do menu       
-      printf("ESCOLHA UMA DAS OPÇÕES A SEGUIR\n");
+	  printf("### cartÃ³rio de consulta ebac ###\n");//inicio do menu       
+      printf("ESCOLHA UMA DAS OPÃ‡Ã•ES A SEGUIR\n");
       printf("\t1-registrar nomes\n");
       printf("\t2-consultar nomes\n");
 	  printf("\t3-deletar nomes\n");
-	  printf("opção:");
+	  printf("opÃ§Ã£o:");
 	  scanf("%d", &opcao);
 	  system("cls"); 
 //---------------------------------------------------------------//---------------------------------------------------		
 		                           
 
-                // associação de "FUNÇÃO" com "SWITCH/CASE/BREAK
+                // associaÃ§Ã£o de "FUNÃ‡ÃƒO" com "SWITCH/CASE/BREAK
         switch(opcao)        
         { 
         case 1:registro();
@@ -156,7 +156,7 @@ int laco=1;
 	
     
      	default: 
-	    printf("Esta opção não existe.\n");
+	    printf("Esta opÃ§Ã£o nÃ£o existe.\n");
         system("pause");
         }   
 
