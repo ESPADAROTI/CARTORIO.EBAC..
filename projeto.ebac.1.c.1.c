@@ -1,16 +1,14 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-                          
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */                          
 //---------------------------------------------------------------//---------------------------------------------------						  
-						  //inicio da escolha usando usando "FUN√á√ÉO"
-                         //fun√ß√µes ficam acima do "INT MAIN" nesse tipo de caso 
+						  //inicio da escolha usando usando "FUN«√O"
+                         //funÁıes ficam acima do "INT MAIN" nesse tipo de caso 
 
-
-int registro()   //inicio da op√ß√£o de registro
+int registro()   //inicio da opÁ„o de registro
 {
      char arquivo1[40];
 	 char cpf[40];
@@ -43,7 +41,6 @@ int registro()   //inicio da op√ß√£o de registro
     fprintf(file,",");
     fclose(file);
 //------------------------------------------------------
-
     printf("DIGITE O SOBRENOME A SER SALVO:");    
     scanf("%s",sobrenome);
     
@@ -66,12 +63,11 @@ int registro()   //inicio da op√ß√£o de registro
     file = fopen(arquivo1, "a");
     fprintf(file,",");
     fclose(file);
-
+    system("pause");
+}
 //------------------------------------------------------
 
-}
-
-int consulta()       //inicio da op√ß√£o de consultar
+int consulta()       //inicio da opÁ„o de consultar
 {
 setlocale(LC_ALL, "Portuguese");
       
@@ -86,12 +82,12 @@ setlocale(LC_ALL, "Portuguese");
     
 	if(file == NULL)
 	{
-		printf("esse arquivo n√£o consta no banco de dados.\n");
+		printf("esse arquivo n„o consta no banco de dados.\n");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-		printf("\nessas s√£o as informa√ß√µes do usu√°rio:\n");
+		printf("\nessas s„o as informaÁıes do usu·rio:\n");
 		printf("%s", conteudo);
 		printf("\n\n");
     }
@@ -99,8 +95,8 @@ setlocale(LC_ALL, "Portuguese");
 
 }
 
-//---------------------------------------------------------------//--------------------------------------------------- 
-int deletar()     //inicio da op√ß√£o de deletar
+//---------------------------------------------------------------//---------------------------------------------------
+int deletar()     //inicio da opÁ„o de deletar
 {
     char cpf[40];
     printf("informe o CPF a ser deletado:\n");
@@ -113,56 +109,77 @@ int deletar()     //inicio da op√ß√£o de deletar
     
     if(file == NULL)
     {
-	printf("essa informa√ß√µes n√£o encontrasse em nosso sistema!\n");
+	printf("essa informaÁıes n„o encontrasse em nosso sistema!\n");
     system("pause");
 	}
-
 }
-
 //---------------------------------------------------------------//--------------------------------------------------- 
-                                         //inicio do programa
-int main() {
+                         //inicio do programa e suas variaÁıes acima e abaixo
+     int main() {
+     setlocale(LC_ALL, "Portuguese");
 	
-setlocale(LC_ALL, "Portuguese");
+     int opcao=0;
+     int laco=1;
+      char senhadeadmin[10]="a";
+      int comparacao;
+	      
+      printf("### cartÛrio de consulta ebac ###\n");
+      printf("informe a senha de administrador:\n\n");
+      scanf("%s",senhadeadmin);
+      
+      comparacao = strcmp(senhadeadmin, "admin");
+      
+	 if(comparacao == 0)
+	 {
+     	
+	  
+     
+     
+     
+     
+     
+     	for(laco=2;laco=2;){
+ 	  	system("cls");
 	
-int opcao=0;
-int laco=1;
- for(laco=1;laco=1;){
- 	system("cls");
-	
-	  printf("### cart√≥rio de consulta ebac ###\n");//inicio do menu       
-      printf("ESCOLHA UMA DAS OP√á√ïES A SEGUIR\n");
-      printf("\t1-registrar nomes\n");
-      printf("\t2-consultar nomes\n");
-	  printf("\t3-deletar nomes\n");
-	  printf("op√ß√£o:");
-	  scanf("%d", &opcao);
-	  system("cls"); 
+	  	printf("### cartÛrio de consulta ebac ###\n");//inicio do menu       
+      	printf("ESCOLHA UMA DAS OP«’ES A SEGUIR\n");
+      	printf("\t1-registrar nomes\n");
+     	printf("\t2-consultar nomes\n");
+	  	printf("\t3-deletar nomes\n");
+	 	printf("\t4-sair do sistema de consulta\n");
+	  	printf("opÁ„o:");
+	  	scanf("%d", &opcao);
+	  		system("cls"); 
 //---------------------------------------------------------------//---------------------------------------------------		
 		                           
-
-                // associa√ß√£o de "FUN√á√ÉO" com "SWITCH/CASE/BREAK
-        switch(opcao)        
-        { 
-        case 1:registro();
-		break;	
+             // associaÁ„o de "FUN«√O" com "SWITCH/CASE/BREAK
+             switch(opcao)        
+             { 
+             case 1:registro();
+		     break;	
+		
+      	 	case 2:consulta(); 
+	     	break;
 	
-	
-      	case 2:consulta(); 
-	    break;
-	
-     	case 3:deletar();
-	    break;
-	
-    
-     	default: 
-	    printf("Esta op√ß√£o n√£o existe.\n");
-        system("pause");
-        }   
-
-
+     	 	case 3:deletar();
+	     	break;
+	    
+	     	case 4:
+	     	printf("obrigado por ter acessado nosso sistema.");
+	     	return 0;
+         	break;
+         	
+        
+     	 	default: 
+	     	printf("Esta opÁ„o n„o existe.\n");
+         	system("pause");
+        	 }
+		
+		 }
+	   }	
+	     else 
+	     printf("senha incorreta!\n\n");
+	 
 }
 
-
-}
 
